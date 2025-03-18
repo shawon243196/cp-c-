@@ -16,39 +16,30 @@ int main()
     freopen("input.txt","r+",stdin);
     freopen("output.o","w+",stdout);
     #endif
-    int t;
-    cin>>t;
-    while(t--){
+
 int n;
 cin>>n;
+int f=0;
 vector<int>v(n);
-int count=0;
 for(int i=0;i<n;i++)
 {
     cin>>v[i];
 }
-for (int i = 0; i < n; i++) 
-   {
-    for (int j = i; j < n; j++)
-        {
-    bool isNonDecreasing = true;//
-    for (int k = i; k <j; k++) 
-            {
-    if (v[k] > v[k + 1]) 
-                       {
-                        isNonDecreasing = false;
-                        break;
-                        }
-            }
-            if (isNonDecreasing) 
-            {
-                count++;
-            }
-        }
-}
-cout<<count<<endl;
-}        
+for(int i=0;i<n;i++)
+{
+    if(v[i]==1)
+    {
+       f=1;
 
+    }
+
+}
+if(f==1){
+cout<<"HARD"<<endl;
+}
+else{
+    cout<<"EASY"<<endl;
+}
 return 0;
 }
  
