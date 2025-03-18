@@ -17,29 +17,23 @@ int main()
     freopen("output.o","w+",stdout);
     #endif
 
-int n;
-cin>>n;
-int f=0;
+int n,h;
+cin>>n>>h;
 vector<int>v(n);
+int cnt=0;
 for(int i=0;i<n;i++)
 {
     cin>>v[i];
 }
 for(int i=0;i<n;i++)
 {
-    if(v[i]==1)
+    if(v[i]<h)
     {
-       f=1;
-
+        cnt++;
     }
+}
+cout<<cnt<<endl;
 
-}
-if(f==1){
-cout<<"HARD"<<endl;
-}
-else{
-    cout<<"EASY"<<endl;
-}
 return 0;
 }
  
