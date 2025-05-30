@@ -1,0 +1,60 @@
+#include <iostream>
+#include<bits/stdc++.h>
+#include <string>
+//#include <cctype>
+#include <vector>
+using namespace std;
+
+#define fasterIO ios::sync_with_stdio(0); cin.tie(0);
+
+class Distance
+
+{
+private:
+    int feet;
+    int inches;
+
+public:
+Distance ()
+{
+feet =0;
+inches=0;
+}
+Distance(int f,int i)
+{
+feet=f;
+inches=i;
+}
+void display()
+{
+    cout<<" Feet :"<<feet<<"  Inches : "<<inches<<endl;
+}
+Distance operator-()
+{
+    feet=-feet;
+    inches=-inches;
+    return Distance(feet,inches);
+}
+    
+};
+int main()
+{   
+    fasterIO
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt","r+",stdin);
+    freopen("output.o","w+",stdout);
+   #endif
+//think before speaking   cin.ignore(); 
+// int a,b,c,d;
+cout<<" enter feet & inches : ";
+// cin>>a>>b>>c>>d;
+Distance D1(10,20),D2(50,40);
+D1.display();
+D1 = -D1; 
+D1.display();
+D2.display();
+D2 = -D2; 
+D2.display();
+return 0;
+}
+
